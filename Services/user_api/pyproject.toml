@@ -1,0 +1,17 @@
+[project]
+name = "user_api"
+version = "0.1.0"
+dependencies = [
+    "fastapi>=0.100.0",
+    "uvicorn>=0.20.0",
+    "sqlalchemy>=2.0.0",
+    "pydantic>=2.0.0",
+    "unnoti_corestore>=0.1.0",
+    "unnoti_dbforge>=0.1.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "black", "isort"]
+
+[tool.setuptools]
+packages = ["app"]

@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "unnoti_dbforge"
+version = "0.1.0"
+dependencies = [
+    "alembic>=1.8.0",
+    "sqlalchemy>=2.0.0",
+    "unnoti_corestore>=0.1.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "black", "isort"]
+
+[tool.setuptools]
+packages = ["unnoti_dbforge"]
+
+[project.scripts]
+unnoti-dbforge-migrate = "unnoti_dbforge.migration_runner:run_migrations"
